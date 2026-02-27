@@ -56,16 +56,30 @@
 				"inputs": [
 					{
 						"referenceName": "SalesData",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"IpContianer": {
+								"value": "@pipeline().parameters.SourceContianer",
+								"type": "Expression"
+							},
+							"sourceStorageAccount": {
+								"value": "@pipeline().parameters.sourcestorageAccount",
+								"type": "Expression"
+							}
+						}
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "DelimitedText1",
+						"referenceName": "OpDataset",
 						"type": "DatasetReference",
 						"parameters": {
 							"containerName": {
 								"value": "@pipeline().parameters.opcontainer",
+								"type": "Expression"
+							},
+							"SinkStorageAccount": {
+								"value": "@pipeline().parameters.sinkstorageaccount",
 								"type": "Expression"
 							}
 						}
@@ -79,6 +93,15 @@
 			},
 			"opcontainer": {
 				"type": "string"
+			},
+			"SourceContianer": {
+				"type": "String"
+			},
+			"sourcestorageAccount": {
+				"type": "String"
+			},
+			"sinkstorageaccount": {
+				"type": "String"
 			}
 		},
 		"variables": {

@@ -1,12 +1,21 @@
 {
-	"name": "DelimitedText1",
+	"name": "OpDataset",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureBlobStorage",
-			"type": "LinkedServiceReference"
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"opStorageAccount": {
+					"value": "@dataset().SinkStorageAccount",
+					"type": "Expression"
+				}
+			}
 		},
 		"parameters": {
 			"containerName": {
+				"type": "String"
+			},
+			"SinkStorageAccount": {
 				"type": "String"
 			}
 		},
