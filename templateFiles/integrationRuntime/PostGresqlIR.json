@@ -1,0 +1,6 @@
+{
+	"name": "PostGresqlIR",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}
