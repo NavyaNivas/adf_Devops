@@ -24,9 +24,8 @@
 								"value": "@pipeline().parameters.subFolder",
 								"type": "Expression"
 							},
-							"wildcardFileName": "*.csv",
-							"enablePartitionDiscovery": true,
-							"partitionRootPath": "synapsefs1505/bronze/sample"
+							"wildcardFileName": "*.*",
+							"enablePartitionDiscovery": true
 						},
 						"formatSettings": {
 							"type": "DelimitedTextReadSettings"
@@ -41,7 +40,7 @@
 						"formatSettings": {
 							"type": "DelimitedTextWriteSettings",
 							"quoteAllText": true,
-							"fileExtension": ".txt"
+							"fileExtension": ".csv"
 						}
 					},
 					"enableStaging": false,
