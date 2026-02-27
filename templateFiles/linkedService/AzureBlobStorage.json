@@ -1,0 +1,11 @@
+{
+	"name": "AzureBlobStorage",
+	"properties": {
+		"type": "AzureBlobStorage",
+		"connectVia": {
+			"referenceName": "AzureIR",
+			"type": "IntegrationRuntimeReference"
+		},
+		"annotations": []
+	}
+}
